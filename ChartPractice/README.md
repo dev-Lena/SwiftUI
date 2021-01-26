@@ -1,11 +1,9 @@
-# SwiftUI - ChartView
+# SwiftUI - Simple Bar Graph
 
 
 ### 동작 화면
 
-![light mode](https://github.com/dev-Lena/SwiftUI/ChartPractice/Media/swiftui_chart_light_mode.gif)![dark mode](https://github.com/dev-Lena/SwiftUI/ChartPractice/Media/swiftui_chart_dark_mode.gif)
-
-
+<img src = "../ChartPractice/Media/swiftui_chart_light_mode.gif" width = "30%"> <img src = "../ChartPractice/Media/swiftui_chart_dark_mode.gif" width = "30%">
 
 ### 새로운 키워드
 

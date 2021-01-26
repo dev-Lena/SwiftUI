@@ -3,7 +3,7 @@
 
 ### 동작 화면
 
-
+![light mode](https://github.com/dev-Lena/SwiftUI/ChartPractice/Media/swiftui_chart_light_mode.gif)![dark mode](https://github.com/dev-Lena/SwiftUI/ChartPractice/Media/swiftui_chart_dark_mode.gif)
 
 
 

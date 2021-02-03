@@ -1,9 +1,8 @@
 # SwiftUI - Custom Inline Curves and Shapes
 
-
 ### 동작 화면
 
-
+<img src = "../CustomInlineCurvesAndShapes/Media/CustomInlineCurvesAndShapes.gif" width = "30%">
 
 ### 새로운 키워드
 
@@ -15,7 +14,7 @@
 
 ### 궁금한 것
 
-1. 버튼을 메서드나 구조체로 만들어서 생성해낼 수는 없나?
+1. 버튼을 메서드나 구조체로 만들어서 생성해낼 수는 없을까?
 
 ```swift
         func ImageButton(imageName: ImageName) -> UIButton {
@@ -34,7 +33,18 @@
 
 ![image-20210202010641574](/Users/keunnalee/Library/Application Support/typora-user-images/image-20210202010641574.png)
 
+2. @State 의 용도
 
+3. $property와 property의 차이
+
+   ```swift
+   @State var property = 0
+   
+   // $property: Binding<Int>
+   // property: Int
+   ```
+
+   
 
 ### 블로그
 

@@ -13,6 +13,8 @@ struct Home: View {
     let popularSearchViewModel = PopularSearchViewModel()
     
     var body: some View {
+        
+        // MARK: - Top View
         VStack {
             HStack {
                 
@@ -40,6 +42,7 @@ struct Home: View {
             .background(Color(AssetName.top))
             .clipShape(Corners(corner: [.bottomRight], size: CGSize(width: 55, height: 55)))
             
+            // MARK: - Word Bubble Shape View
             HStack {
                 
                 VStack {
@@ -80,26 +83,28 @@ struct Home: View {
             // moving view up
             .padding(.top, -70)
             
+            
+            // MARK: - Explore Categories View
             // create simple bottomleft outline corner radius
             ZStack {
                 Color(AssetName.select)
                 
                 ScrollView(.vertical, showsIndicators: false){
-                
+                    
                     HStack {
                         Text("Explore Categories")
                             .fontWeight(.bold)
                             .font(.system(size: 20))
-
+                        
                         Spacer()
-
+                        
                         Button(action: {
-
+                            
                         }) {
                             Image(systemName: SystemImageName.ellipsis)
                                 .font(.title)
                         }
-
+                        
                     }
                     .foregroundColor(.black)
                     .padding(.leading, 35)
@@ -107,13 +112,7 @@ struct Home: View {
                     .padding(.trailing)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 25) {
-                            CardView(cardViewModel: cardViewModel, cardIndex: 0, systemImageName: SystemImageName.desktopcomputer, text: "IT", horizontalPadding: 5)
-                            CardView(cardViewModel: cardViewModel, cardIndex: 1, systemImageName: SystemImageName.quoteBubbleFill, text: "Content", horizontalPadding: 10)
-                            CardView(cardViewModel: cardViewModel, cardIndex: 2, systemImageName: SystemImageName.photoOnRectangle, text: "Culture", horizontalPadding: 10)
-                            CardView(cardViewModel: cardViewModel, cardIndex: 3, systemImageName: SystemImageName.scissors, text: "Beauty", horizontalPadding: 10)
-                        }
-                        .padding(.horizontal, 25)
+                        CardViews()
                     }
                     
                     HStack{
@@ -138,19 +137,16 @@ struct Home: View {
                     .padding(.top, 25)
                     .padding(.trailing)
                     
+                    // MARK: - Popular Search View
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 25) {
-                            PopularSearchView(popularSearchViewModel: self.popularSearchViewModel, field: "UI/UX", position: "Designer", openPosition: "4 Job Oppournity", index: 0)
-                            PopularSearchView(popularSearchViewModel: self.popularSearchViewModel, field: "iOS", position: "Developers", openPosition: "15 Job Oppournity", index: 1)
-                        }
-                        .padding(.horizontal, 25)
+                    PopularSearchViews()
                     }
                     .padding(.top, 25)
-                    .padding(.bottom, (UIApplication.shared.windows.first?.safeAreaInsets.bottom)! + 10)
-                        
+                    
                 }
                 .background(Color.white)
                 // acheive outline corner radius (only to topleft)
+                // Tail of word balloon
                 .clipShape(Corners(corner: [.topLeft], size: CGSize(width: 70, height: 70)))
                 
             }

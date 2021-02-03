@@ -18,6 +18,8 @@
 		6A2756E025C99DA600D8A573 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2756DF25C99DA600D8A573 /* Home.swift */; };
 		6A2756E325C9B40200D8A573 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2756E225C9B40200D8A573 /* CardView.swift */; };
 		6A2756E625CA6D2E00D8A573 /* PopularSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2756E525CA6D2E00D8A573 /* PopularSearchView.swift */; };
+		6A2756E925CA776200D8A573 /* CardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2756E825CA776200D8A573 /* CardViews.swift */; };
+		6A2756ED25CA7C3500D8A573 /* PopularSearchViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2756EC25CA7C3500D8A573 /* PopularSearchViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		6A2756DF25C99DA600D8A573 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		6A2756E225C9B40200D8A573 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		6A2756E525CA6D2E00D8A573 /* PopularSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSearchView.swift; sourceTree = "<group>"; };
+		6A2756E825CA776200D8A573 /* CardViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViews.swift; sourceTree = "<group>"; };
+		6A2756EC25CA7C3500D8A573 /* PopularSearchViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSearchViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +95,9 @@
 				6A2756C125C8552300D8A573 /* ContentView.swift */,
 				6A2756DF25C99DA600D8A573 /* Home.swift */,
 				6A2756E225C9B40200D8A573 /* CardView.swift */,
+				6A2756E825CA776200D8A573 /* CardViews.swift */,
 				6A2756E525CA6D2E00D8A573 /* PopularSearchView.swift */,
+				6A2756EC25CA7C3500D8A573 /* PopularSearchViews.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,9 +192,11 @@
 				6A2756C225C8552300D8A573 /* ContentView.swift in Sources */,
 				6A2756E625CA6D2E00D8A573 /* PopularSearchView.swift in Sources */,
 				6A2756D725C99D5800D8A573 /* SystemImageName.swift in Sources */,
+				6A2756ED25CA7C3500D8A573 /* PopularSearchViews.swift in Sources */,
 				6A2756D125C99D1400D8A573 /* Corners.swift in Sources */,
 				6A2756C025C8552300D8A573 /* CustomInlineCurvesAndShapesApp.swift in Sources */,
 				6A2756DD25C99D8800D8A573 /* typealias.swift in Sources */,
+				6A2756E925CA776200D8A573 /* CardViews.swift in Sources */,
 				6A2756DA25C99D6E00D8A573 /* AssetName.swift in Sources */,
 				6A2756E325C9B40200D8A573 /* CardView.swift in Sources */,
 				6A2756E025C99DA600D8A573 /* Home.swift in Sources */,

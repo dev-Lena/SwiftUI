@@ -58,7 +58,6 @@ struct PopularSearchView: View {
         .background(self.index == popularSearchViewModel.currentIndex ? Color("select") : Color.black.opacity(0.06))
         .cornerRadius(35)
         .onTapGesture {
-//            popularSearchViewModel.currentIndex = self.index
             self.index = popularSearchViewModel.currentIndex
         }
     }

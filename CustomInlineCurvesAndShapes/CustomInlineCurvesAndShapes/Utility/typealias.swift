@@ -8,3 +8,4 @@
 import Foundation
 
 typealias ImageName = String
+typealias Index = Int

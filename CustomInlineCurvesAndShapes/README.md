@@ -7,11 +7,11 @@
 
 ### 새로운 키워드
 
-`Image().renderingMode()` / `func renderingMode(_ renderingMode: Image.TemplateRenderingMode?) -> Image`
+`renderingMode()` / `func renderingMode(_ renderingMode: Image.TemplateRenderingMode?) -> Image`
 
-`Image().renderingMode()` / `func resizable(capInsets: EdgeInsets = EdgeInsets(), resizingMode: Image.ResizingMode = .stretch) -> Image`
+`resizable()` / `func resizable(capInsets: EdgeInsets = EdgeInsets(), resizingMode: Image.ResizingMode = .stretch) -> Image`
 
-
+`clipShape()` / `func clipShape<S>(_ shape: S, style: FillStyle = FillStyle()) -> some View where S : Shape`
 
 ### 궁금한 것
 

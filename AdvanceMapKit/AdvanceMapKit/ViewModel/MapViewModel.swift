@@ -27,6 +27,9 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         switch manager.authorizationStatus {
         case .denied: permissionDenied.toggle()
         case .notDetermined: manager.requestWhenInUseAuthorization()
+        case .authorizedWhenInUse:
+            // if permission given
+            manager.requestLocation()
         default:
             ()
         }
@@ -35,5 +38,17 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         // error
         print(error.localizedDescription)
+    }
+    
+    // getting user region
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        self.region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000)
+        
+        // updating map
+        self.mapView.setRegion(self.region, animated: true)
+        
+        // smooth animations
+        self.mapView.setVisibleMapRect(self.mapView.visibleMapRect, animated: true)
     }
 }

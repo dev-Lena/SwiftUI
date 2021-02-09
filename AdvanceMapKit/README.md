@@ -10,6 +10,18 @@ with: MapKit, Core Location, MVVM, Custom Search Bar, SwiftUI
 
 <img src = "../AdvanceMapKit/Media/HybridMapType.png" width = "20%"><img src = "../AdvanceMapKit/Media/SearchBar.png" width = "20%"><img src = "../AdvanceMapKit/Media/SearchResultPin.png" width = "20%">
 
+### 구현 기능
+
+1. 위치 권한 설정
+2. 현재 위치 표시
+3. 장소 검색 
+4. 검색 결과 Pin으로 표시
+5. location 버튼: 현재 위치로 이동
+6. Map Type 변경: standard / hybrid
+7. Custom Pin 
+
+
+
 ### 새로운 키워드
 
 `@StateObject`

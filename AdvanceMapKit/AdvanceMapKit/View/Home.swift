@@ -21,6 +21,22 @@ struct Home: View {
             .ignoresSafeArea(.all, edges: .all)
             
             VStack {
+                
+                VStack {
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.gray)
+                        
+                        TextField("Search", text: $mapData.searchText)
+                            .colorScheme(.light)
+                    }
+                    .padding(.vertical, 10)
+                    .padding(.horizontal)
+                    .background(Color.white)
+                    
+                }
+                .padding()
+                
                 Spacer()
                 
                 VStack {
@@ -62,6 +78,19 @@ struct Home: View {
                 // redirecting user to settings
                 UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
             }))
+        })
+        .onChange(of: mapData.searchText, perform: { value in
+            // searching places
+            
+            // you can use your own delay time to avoid continuous search request
+            let delay = 0.3
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                if value == mapData.searchText {
+                    // search
+                    self.mapData.searchQuery()
+                }
+            }
         })
     }
 }

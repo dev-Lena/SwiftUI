@@ -14,6 +14,7 @@
 		6A818DDA25D2231900F62D4B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A818DD925D2231900F62D4B /* Home.swift */; };
 		6A818DDE25D2232700F62D4B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A818DDD25D2232700F62D4B /* MapView.swift */; };
 		6A818DE125D2233100F62D4B /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A818DE025D2233100F62D4B /* MapViewModel.swift */; };
+		6A818DE525D22CE300F62D4B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A818DE425D22CE300F62D4B /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6A818DD925D2231900F62D4B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		6A818DDD25D2232700F62D4B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		6A818DE025D2233100F62D4B /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		6A818DE425D22CE300F62D4B /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		6A818D7725D191E700F62D4B /* AdvanceMapKit */ = {
 			isa = PBXGroup;
 			children = (
+				6A818DE325D22CDC00F62D4B /* Model */,
 				6A818DD825D2231200F62D4B /* ViewModel */,
 				6A818DD725D2230900F62D4B /* View */,
 				6A818D7825D191E700F62D4B /* AdvanceMapKitApp.swift */,
@@ -92,6 +95,14 @@
 				6A818DE025D2233100F62D4B /* MapViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6A818DE325D22CDC00F62D4B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A818DE425D22CE300F62D4B /* Place.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +177,7 @@
 				6A818D7B25D191E700F62D4B /* ContentView.swift in Sources */,
 				6A818DE125D2233100F62D4B /* MapViewModel.swift in Sources */,
 				6A818DDE25D2232700F62D4B /* MapView.swift in Sources */,
+				6A818DE525D22CE300F62D4B /* Place.swift in Sources */,
 				6A818DDA25D2231900F62D4B /* Home.swift in Sources */,
 				6A818D7925D191E700F62D4B /* AdvanceMapKitApp.swift in Sources */,
 			);

@@ -25,6 +25,12 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     // map type
     @Published var mapType: MKMapType = .standard
     
+    // search text
+    @Published var searchText = ""
+    
+    // searched places
+    @Published var places: [Place] = []
+    
     // updating map type
     
     func updateMapType() {
@@ -43,6 +49,25 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         guard let _ = region else { return }
         mapView.setRegion(region, animated: true)
         mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
+    }
+    
+    //search places
+    
+    func searchQuery() {
+        
+        places.removeAll()
+        
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = searchText
+        
+        // fetch
+        MKLocalSearch(request: request).start { (response, _) in
+            guard let result = response else { return }
+            
+            self.places = result.mapItems.compactMap({ (item) -> Place? in
+                return Place(place: item.placemark)
+            })
+        }
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {

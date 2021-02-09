@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct Home: View {
     
     @StateObject var mapData = MapViewModel()
-    
+    // location manager
+    @State var locationManager = CLLocationManager()
     var body: some View {
         ZStack {
             MapView()
@@ -18,5 +20,11 @@ struct Home: View {
                 .environmentObject(mapData)
             .ignoresSafeArea(.all, edges: .all)
         }
+        .onAppear(perform: {
+            
+            // setting delegate
+            locationManager.delegate = mapData
+            locationManager.requestWhenInUseAuthorization()
+        })
     }
 }

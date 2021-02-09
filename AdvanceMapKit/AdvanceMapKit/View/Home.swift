@@ -36,7 +36,7 @@ struct Home: View {
                     
                     // displaying results
                     
-                    if mapData.places.isEmpty && mapData.searchText != "" {
+                    if !mapData.places.isEmpty && mapData.searchText != "" {
                         
                         ScrollView {
                             VStack(spacing: 15) {

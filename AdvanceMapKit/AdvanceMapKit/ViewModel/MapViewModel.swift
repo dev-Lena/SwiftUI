@@ -22,6 +22,21 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     // alert
     @Published var permissionDenied = false
     
+    // map type
+    @Published var mapType: MKMapType = .standard
+    
+    // updating map type
+    
+    func updateMapType() {
+        if mapType == .standard {
+            mapType = .hybrid
+            mapView.mapType = mapType
+        } else {
+            mapType = .standard
+            mapView.mapType = mapType
+        }
+    }
+    
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         // checking permission
         switch manager.authorizationStatus {

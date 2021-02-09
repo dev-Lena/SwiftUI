@@ -37,6 +37,14 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
     
+    // focus location
+    
+    func focusLocation() {
+        guard let _ = region else { return }
+        mapView.setRegion(region, animated: true)
+        mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
+    }
+    
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         // checking permission
         switch manager.authorizationStatus {

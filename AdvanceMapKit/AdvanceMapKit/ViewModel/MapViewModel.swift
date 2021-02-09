@@ -65,7 +65,7 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             guard let result = response else { return }
             
             self.places = result.mapItems.compactMap({ (item) -> Place? in
-                return Place(place: item.placemark)
+                return Place(placemark: item.placemark)
             })
         }
     }

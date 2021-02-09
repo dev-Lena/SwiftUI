@@ -70,6 +70,24 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
     
+    // pick search result
+    
+    func selectPlace(place: Place) {
+        
+        // showing pin on map
+        
+        searchText = ""
+        guard let coordinate = place.placemark.location?.coordinate else { return }
+        
+        let pointAnnotation = MKPointAnnotation()
+        pointAnnotation.coordinate = coordinate
+        pointAnnotation.title = place.placemark.name ?? "No Name"
+        
+        // removing all old ones
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.addAnnotation(pointAnnotation)
+    }
+    
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         // checking permission
         switch manager.authorizationStatus {

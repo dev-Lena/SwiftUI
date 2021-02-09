@@ -26,5 +26,13 @@ struct Home: View {
             locationManager.delegate = mapData
             locationManager.requestWhenInUseAuthorization()
         })
+        // permission denied alert
+        .alert(isPresented: $mapData.permissionDenied, content: {
+            Alert(title: Text("Permission Denied"), message: Text("Please Enable Permission In App Settings"), dismissButton: .default(Text("Goto Settings"), action: {
+                
+                // redirecting user to settings
+                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+            }))
+        })
     }
 }

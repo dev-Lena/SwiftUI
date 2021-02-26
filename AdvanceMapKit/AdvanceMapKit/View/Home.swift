@@ -26,7 +26,7 @@ struct Home: View {
                     HStack {
                         Image(systemName: "magnifyingglass")
                             .foregroundColor(.gray)
-                        
+
                         TextField("Search", text: $mapData.searchText)
                             .colorScheme(.light)
                     }
@@ -37,7 +37,7 @@ struct Home: View {
                     // displaying results
                     
                     if !mapData.places.isEmpty && mapData.searchText != "" {
-                        
+//                    if !mapData.places.isEmpty{
                         ScrollView {
                             VStack(spacing: 15) {
                                 ForEach(mapData.places) { place in
@@ -104,10 +104,10 @@ struct Home: View {
         })
         .onChange(of: mapData.searchText, perform: { value in
             // searching places
-            
+
             // you can use your own delay time to avoid continuous search request
             let delay = 0.3
-            
+
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                 if value == mapData.searchText {
                     // search
